@@ -1,5 +1,7 @@
 <?php
 
 include('../include.php');
-Kernel\Connexion::get();
-include('../app/Views/index.php');
+
+$controller = new app\Controllers\PaysController();
+$view = $controller->index();
+$view->display();

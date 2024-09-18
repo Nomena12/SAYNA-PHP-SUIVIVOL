@@ -19,7 +19,7 @@ class Connexion {
 
                 // Création de l'objet PDO
                 
-                self::$pdo = new \PDO('mysql:host='.DB::HOST.';DB_name='.DB::NAME, DB::USERNAME, DB::PASSWORD);
+                self::$pdo = new \PDO('mysql:host='.DB::HOST.';dbname='.DB::NAME, DB::USERNAME, DB::PASSWORD);
                 
                 // Configuration des options de PDO
                 
@@ -41,5 +41,13 @@ class Connexion {
     return self::$pdo;
 
 }
+
+public static function query($query,$class,$params=[]){
+
+    $stmt= self::get()->prepare($query);
+    $stmt->execute($params);
+    return $stmt->fetchAll(\PDO::FETCH_CLASS,$class);
+}
+
 }
 
