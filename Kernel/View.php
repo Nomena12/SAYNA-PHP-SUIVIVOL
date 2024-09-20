@@ -14,6 +14,11 @@ class View{
     }
 
     public function display(){
+
+        foreach($this->params as $key => $value){
+            $$key = $value;
+
+        }
         include('../app/Views/'.$this->filename);
     }
 }
