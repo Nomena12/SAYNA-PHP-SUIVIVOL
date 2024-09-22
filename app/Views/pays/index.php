@@ -20,23 +20,28 @@ include('../app/Views/header.php');
                     <tbody>
                         <?php
                         foreach($pays as $p){
+                            
                             echo '<tr>';
                             echo '<td>'. $p->name .'</td>';
                             echo '<td>';
-                            $url = '.?controller=Pays&action=edit';
-                            $label = '<i class="fas fa-pen"></i>';
-                            $type ='info';
-                            include('../app/Views/components/button.php');
+                            echo kernel\Component::display('button',['url' => '.?controller=Pays&action=edit&pays='.$p->id,
+                            'label' => '<i class="fas fa-pen"></i>',
+                            'type' =>'info', ]);
+                            
+                           
 
-                            $url = '.?controller=Pays&action=delete';
-                            $label = ' <i class="fas fa-trash"></i>';
-                            $type = 'danger';
-                            include('../app/Views/components/button.php');
+                             echo kernel\Component::display('button',['url' => '.?controller=Pays&action=delete&pays='.$p->id,
+                            'label' => '<i class="fas fa-trash"></i>',
+                            'type' =>'danger', ]);
+
+                           
+                           
                             echo '</td>';
 
                             echo '</tr>';
                         }
 
+                       
                         
 
 
