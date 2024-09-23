@@ -1,0 +1,33 @@
+/* Conteneur de la barre de navigation */
+#navbarCollapse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #f8f9fa; /* Couleur de fond légère */
+}
+
+/* Style des liens de navigation */
+.leftLink {
+    display: inline-block;
+    margin-right: 20px; /* Espace entre les liens */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 16px; /* Taille de la police */
+    color: #007bff; /* Couleur du texte bleu */
+    font-weight: 500; /* Poids du texte moyen */
+    padding: 10px 15px; /* Espacement interne des liens */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Hover effect - survol des liens */
+.leftLink:hover {
+    color: white; /* Couleur du texte au survol */
+    background-color: #007bff; /* Couleur de fond au survol */
+}
+
+/* Lien actif ou sélectionné */
+.leftLink.active {
+    background-color: #0056b3; /* Couleur de fond du lien actif */
+    color: white; /* Couleur du texte du lien actif */
+}

@@ -13,10 +13,5 @@ class Pays extends Model{
                 \kernel\Connexion::execute($query,['name'=>$this->name,'id'=>$this->id]);
         }
 
-    /*    public function suppr(){
-                $query = 'delete from pays where id=:id';
-                \kernel\Connexion::execute($query,['id'=>$this->id]);
-
-        }
-    */
+   
 }

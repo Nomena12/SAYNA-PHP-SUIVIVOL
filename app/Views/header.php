@@ -17,6 +17,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/test.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
@@ -39,13 +41,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <div class="collapse navbar-collapse order-3" id="navbarCollapse">
         <!-- Left navbar links -->
+      <a href='.?controller=Vols&action=index' class='leftLink'>Vols</a>
+
+      <a href='.?controller=Pays&action=index' class='leftLink'>Pays</a>
+
+      <a href='' class='leftLink'>Aeroports</a>
 
 
         <!-- SEARCH FORM -->
+      
        
       </div>
 
       <!-- Right navbar links -->
+      
       
     </div>
   </nav>
