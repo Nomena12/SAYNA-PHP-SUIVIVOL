@@ -1,0 +1,70 @@
+/*code pour le menu deconnexion
+
+/* Style du conteneur du menu utilisateur */
+/* Style du conteneur du menu utilisateur */
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style du bouton principal avec l'icône utilisateur */
+.user-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+}
+
+/* Icônes dans le bouton */
+.user-btn i {
+    margin-right: 8px;
+}
+
+/* Style du sous-menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Liens dans le sous-menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+/* Style au survol des liens */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affichage du sous-menu lorsque l'utilisateur clique sur le bouton */
+.user-menu:hover .dropdown-content {
+    display: block;
+}
+
+/* Style du bouton au survol */
+.user-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Correction d'affichage pour icônes */
+.user-btn i:last-child {
+    margin-left: auto;
+}

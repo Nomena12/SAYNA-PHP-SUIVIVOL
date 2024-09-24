@@ -17,6 +17,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/test2.css">
+
   <link rel="stylesheet" href="dist/css/test.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -25,6 +27,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 </head>
 <body class="hold-transition layout-top-nav">
+
+
+
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -47,6 +52,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <a href='' class='leftLink'>Aeroports</a>
 
+      
+
+
 
         <!-- SEARCH FORM -->
       
@@ -54,10 +62,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
 
       <!-- Right navbar links -->
+     
+
+
       
       
     </div>
+    <div class="user-menu" id='user'>
+    <button class="user-btn">
+        <i class="fas fa-user"></i> Mon compte
+        <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="dropdown-content">
+        <a href="#">Mon profil</a>
+        <a href="#">Paramètres</a>
+        <a href=".?controller=Authentif&action=index">Déconnexion</a>
+    </div>
+</div>
+
+
   </nav>
+ 
   <!-- /.navbar -->
 
   <!-- Content Wrapper. Contains page content -->
