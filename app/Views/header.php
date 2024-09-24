@@ -50,7 +50,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <a href='.?controller=Pays&action=index' class='leftLink'>Pays</a>
 
-      <a href='' class='leftLink'>Aeroports</a>
+      <a href='.?controller=Aeroports&action=index' class='leftLink'>Aeroports</a>
 
       
 
