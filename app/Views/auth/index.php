@@ -17,18 +17,18 @@
 </head>
 <body>
     <div class="login-container">
-        <form action=".?controller=Vols&action=index" method="POST" class="login-form">
+        <form action=".?controller=Authentif&action=verifLogin" method="POST" class="login-form">
             <h2>Connexion</h2>
             <div class="form-group">
-                <label for="username">Nom d'utilisateur</label>
-                <input type="text" id="username" name="username" required>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Mot de passe</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" class="login-btn">Se connecter</button>
-            <p class="signup-link">Pas encore de compte ? <a href="signup.php">S'inscrire</a></p>
+            <p class="signup-link">Pas encore de compte ? <a href=".?controller=Authentif&action=register">S'inscrire</a></p>
         </form>
     </div>
 </body>

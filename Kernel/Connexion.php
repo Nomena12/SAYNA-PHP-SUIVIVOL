@@ -48,13 +48,25 @@ public static function query($query,$class,$params=[]){
     $stmt->execute($params);
     return $stmt->fetchAll(\PDO::FETCH_CLASS,$class);
 }
-
+/*
 public static function execute($query,$params=[]){
 
     $stmt= self::get()->prepare($query);
     $stmt->execute($params);
 
 }
+
+*/
+
+public static function execute($query, $params = []) {
+    try {
+        $stmt = self::get()->prepare($query);
+        $stmt->execute($params);
+    } catch (\PDOException $e) {
+        echo "Erreur lors de l'exécution de la requête : " . $e->getMessage();
+    }
+}
+
 
 }
 
