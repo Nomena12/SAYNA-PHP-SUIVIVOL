@@ -34,19 +34,19 @@ class Vols extends Model{
             $this->porteEmbarquement
         ]);
         
-
-
-        // Exemple avec PDO
-    /*    $stmt = $pdo->prepare($query);
-        $stmt->execute([
-            $this->numero,
-            $this->compagnie_id,
-            $this->aeroportDepart_id,
-            $this->aeroportArrivee_id,
-            $this->dateHeureDepartPrevue,
-            $this->dateHeureArriveePrevue,
-            $this->statut,
-            $this->porteEmbarquement
-        ]); */
     }
+
+
+    public function toggleFavori($id) {
+        // Récupérer le vol par son ID
+        $vol = $this->find($id); // Assurez-vous que cette méthode existe pour trouver un vol par ID
+        
+        // Déterminer le nouvel état du favori
+        $nouveauLabel = ($vol->favori == '<i class="far fa-star"></i>') ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
+    
+        // Mettre à jour le champ 'favori' dans la base de données
+        $query = "UPDATE vols SET favori = ? WHERE id = ?";
+        \kernel\Connexion::execute($query, [$nouveauLabel, $id]);
+    }
+    
 }
