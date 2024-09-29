@@ -67,6 +67,19 @@ public static function execute($query, $params = []) {
     }
 }
 
+public static function executeExc($query, $params = []) {
+    try {
+        $stmt = self::get()->prepare($query);
+        $stmt->execute($params);
+        return $stmt; // Ajoute cette ligne pour retourner l'objet $stmt
+    } catch (\PDOException $e) {
+        echo "Erreur lors de l'exécution de la requête : " . $e->getMessage();
+        return null; // Retourne null en cas d'erreur pour éviter d'autres erreurs
+    }
+}
+
+
+
 
 }
 

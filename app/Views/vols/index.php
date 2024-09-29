@@ -2,6 +2,8 @@
 
 include('../app/Views/header.php');
 
+//session_start();
+use kernel\Auth;
 
 
 ?>
@@ -30,7 +32,12 @@ include('../app/Views/header.php');
 
                 <tbody>
 
+              
+
                     <?php
+                    
+
+                    
                     foreach ($vols as $v) {
                         echo '<tr>';
 

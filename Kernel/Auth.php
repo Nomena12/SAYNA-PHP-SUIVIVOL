@@ -15,6 +15,7 @@ class Auth{
 
         if (isset($users[0])) {
            $_SESSION['user_id']= $users[0]->id;
+           var_dump($users[0]->id);
         }
 
     }
