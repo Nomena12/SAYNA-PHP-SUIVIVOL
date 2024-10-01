@@ -13,14 +13,13 @@ include('../kernel/Component.php');
 class VolsController extends \kernel\Controller{
     public function index(){
         $vols = \app\Models\Vols::all();
-        return new \kernel\View('vols/index.php',['vols'=>$vols]);
+        $compagnies = \app\Models\Compagnies::all();
+        $aeroports = \app\Models\Aeroports::all();
+
+     return new \kernel\View('vols/index.php',['vols'=>$vols,'compagnies'=>$compagnies,'aeroports'=>$aeroports]);
     }
 
-   /* public function toggleFavori(){
-        return new \kernel\View('vols/testVol.php');
-      
-    }
-        */
+  
 
         public function toggleFavori() {
             $id = Request::get('vols'); // Récupérer l'ID du vol
@@ -37,15 +36,23 @@ class VolsController extends \kernel\Controller{
 
         }
 
+    /*   public function tri(){
+        $vols = \app\Models\Vols::all();
+        $compagnies = \app\Models\Compagnies::all();
+        $aeroports = \app\Models\Aeroports::all();
 
-        /*
+     return new \kernel\View('vols/testVol.php',['vols'=>$vols,'compagnies'=>$compagnies,'aeroports'=>$aeroports]);
+    }
+*/
+    public function search(){
+        $vols = \app\Models\Vols::search(\kernel\Request::all());
+        $compagnies = \app\Models\Compagnies::all();
+        $aeroports = \app\Models\Aeroports::all();
+        return new \kernel\View('vols/index.php',['vols'=>$vols,'titre'=>'recherche de vols','compagnies'=>$compagnies,'aeroports'=>$aeroports]);
+    }
+   
+       }
 
-        public function toggleFavori(){
-        $vol = Vols::find(Request::get('vols'));
-        $vol->toggleFavori();
-        header('Location:' . $_SERVER[''HTTP_REFERER]);
-        }
 
-        */
         
-}
+        

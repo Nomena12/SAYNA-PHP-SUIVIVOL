@@ -1,0 +1,27 @@
+h2{
+    margin-right: 20px;
+}
+
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.search-container select {
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.search-container button{
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: rgb(175, 39, 39);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
