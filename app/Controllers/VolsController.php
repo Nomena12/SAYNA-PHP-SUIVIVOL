@@ -6,7 +6,7 @@ use kernel\Request;
 use kernel\Model;
 
 
-include('../kernel/Component.php');
+include('kernel/Component.php');
 
 
 

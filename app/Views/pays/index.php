@@ -1,6 +1,6 @@
 <?php 
 
-include('../app/Views/header.php');
+include('app/Views/header.php');
 
 
 
@@ -54,4 +54,4 @@ include('../app/Views/header.php');
         </div>
      
 <?php
-include('../app/Views/footer.php');
+include('app/Views/footer.php');

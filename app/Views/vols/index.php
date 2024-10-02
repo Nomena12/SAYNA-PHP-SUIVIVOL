@@ -1,6 +1,6 @@
 <?php 
 
-include('../app/Views/header.php');
+include('app/Views/header.php');
 
 
 use kernel\Auth;
@@ -49,8 +49,8 @@ use kernel\Auth;
     </button>
     </form>
 
-<?php  include('../app/Views/vols/table.php');  ?>
+<?php  include('app/Views/vols/table.php');  ?>
         </div>
 
 <?php
-include('../app/Views/footer.php');
+include('app/Views/footer.php');

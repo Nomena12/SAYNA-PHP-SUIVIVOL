@@ -46,6 +46,7 @@ public static function query($query,$class,$params=[]){
 
     $stmt= self::get()->prepare($query);
     $stmt->execute($params);
+    file_put_contents('../SUIVIDEVOL/queries.txt',$query.PHP_EOL,FILE_APPEND);
     return $stmt->fetchAll(\PDO::FETCH_CLASS,$class);
 }
 /*

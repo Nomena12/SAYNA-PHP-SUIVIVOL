@@ -1,6 +1,6 @@
 <?php
 
-include('../include.php');
+include('include.php');
 
 $controllerName = 'app\\Controllers\\'.$_GET['controller'].'Controller';
 $actionName = $_GET['action'];

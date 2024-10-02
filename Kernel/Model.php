@@ -4,7 +4,9 @@ namespace Kernel;
 
 class Model{
    
-   protected static string $table; 
+   protected static string $table;
+   
+  
 
    public static function all(){
 

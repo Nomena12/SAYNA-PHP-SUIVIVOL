@@ -19,6 +19,6 @@ class View{
             $$key = $value;
 
         }
-        include('../app/Views/'.$this->filename);
+        include('app/Views/'.$this->filename);
     }
 }
